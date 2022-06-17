@@ -1,0 +1,135 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: hsl(0, 0%, 98%);
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    width: 80vw;
+    height: 90vh;
+}
+.header {
+    margin: 0 auto;
+    width: 520px;
+    height: 30%;
+    padding: 0px 15px 0px;
+    text-align: center;
+    line-height: 1.5;
+}
+.header h1 {
+    color: hsl(234, 12%, 34%);
+    font-weight: 100;
+}
+.header h2 {
+    color: hsl(234, 12%, 34%);
+    font-size: 31px;
+    margin-bottom: 10px;
+}
+.header p {
+    color: hsl(229, 6%, 66%);
+    font-size: 14px;
+}
+.block {
+    height: 70%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+}
+.first {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.second {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;    
+}
+.third {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+/* Card */
+.singlecard {
+    width: 300px;
+    height: 200px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    padding: 25px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 10px 10px #ddd;
+}
+.textos h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: hsl(234, 12%, 34%);
+}
+.textos p {
+    font-size: 12px;
+    color: hsl(229, 6%, 66%);
+}
+.picture {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    height: 100%;
+}
+.picture img {
+    width: 50px;
+}
+.cyan {
+    border-top: 4px solid hsl(180, 62%, 55%);
+}
+.red {
+    border-top: 4px solid hsl(0, 78%, 62%);
+}
+.orange {
+    border-top: 4px solid hsl(34, 97%, 64%);
+}
+.blue {
+    border-top: 4px solid hsl(212, 86%, 64%);
+}
+/* Media queries */
+@media screen and (max-width: 1200px) {
+    body {
+        min-height: 100vh;
+    }
+    .container {
+        width: 100%;
+    }
+    .header {
+        width: auto;        
+        min-width: 350px;
+    }
+    .header h1 {
+        font-size: 20px;
+    }
+    .header h2 {
+        font-size: 20px;
+    }
+    .block {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        width: 100%;
+        gap: 15px;
+    }
+    .cards {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .singlecard {
+        width: 100%;
+        min-width: 300px;        
+    }
+}
